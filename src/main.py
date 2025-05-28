@@ -23,7 +23,7 @@ client = httpx.AsyncClient(timeout=10, headers={"Accept-Encoding":"identity"})
 
 HOP = {"connection","keep-alive","proxy-authenticate","proxy-authorization",
        "te","trailers","transfer-encoding","upgrade","content-length",
-       "host","content-encoding"} 
+       "host"} 
 
 def clean(h: dict[str,str], *, keep_auth: bool) -> dict[str,str]:
     """Filtra headers hop-by-hop; opcionalmente deja Authorization."""
